@@ -1,0 +1,18 @@
+[project]
+name = "mltempalte_soft888"
+version = "0.0.1"
+authors = [
+  { name="mritunjay tiwari", email="soft888@live.com" },
+]
+description = "A ML template to generate base structure for your ML projects."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/soft888/mlprjoect"
+"Bug Tracker" = "https://github.com/soft888/mlprjoect/issues"

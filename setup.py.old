@@ -1,0 +1,41 @@
+from typing import List
+from setuptools import find_packages,setup
+
+HYPEN_E_DOT='-e .'
+def get_requirements(file_path:str)->List[str]:
+    '''
+    this function will return the list of requirements
+    '''
+    requirements=[]
+    with open(file_path, encoding="utf-8") as file_obj:
+        requirements=file_obj.readlines()
+        requirements=[req.replace("\n","") for req in requirements]
+
+        if HYPEN_E_DOT in requirements:
+            requirements.remove(HYPEN_E_DOT)
+    
+    return requirements
+
+
+setup(
+    name="ML Template",
+    version="0.0.1",
+    description="a project to demonstrait use of ML from start to end",
+    author="Mritunjay Tiwari",
+    author_email="soft888@live.com",
+    packages=find_packages(),
+    install_requires=get_requirements("requirements.txt"),
+    classifiers=[
+          'Development Status :: 1 - Beta',
+          'Environment :: Console',
+          'Intended Audience :: Developers',
+          'Intended Audience :: Data Scientists',
+          'License :: OSI Approved :: Python Software Foundation License',
+          'Operating System :: MacOS :: MacOS X',
+          'Operating System :: Microsoft :: Windows',
+          'Programming Language :: Python',
+          'Topic :: Communications :: Email',
+          'Topic :: Community project',
+          'Topic :: Data Science :: Machine Learning Tempalte',
+          ],
+)
